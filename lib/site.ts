@@ -1,6 +1,6 @@
 export const site = {
   owner: "amrxtgh69",
-  repo: "amrxtgh.github.io",
+  repo: "amrxtgh69.github.io",
   branch: "main",
   title: "amrxtgh",
   description: "Entries, posts, and things I find fascinating.",
