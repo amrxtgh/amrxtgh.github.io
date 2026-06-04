@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
 }
 
@@ -22,5 +22,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+.prose-content {
+  line-height: 1.7;
+}
+.prose-content h1 { font-size: 1.875rem; font-weight: 700; margin: 1.5rem 0 1rem; letter-spacing: -0.01em; }
+.prose-content h2 { font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 0.75rem; letter-spacing: -0.01em; }
+.prose-content h3 { font-size: 1.25rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+.prose-content p { margin: 0.75rem 0; }
+.prose-content a { text-decoration: underline; text-underline-offset: 3px; }
+.prose-content ul, .prose-content ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+.prose-content ul { list-style: disc; }
+.prose-content ol { list-style: decimal; }
+.prose-content li { margin: 0.25rem 0; }
+.prose-content code { font-family: var(--font-mono), monospace; font-size: 0.875em; background: rgba(0,0,0,0.05); padding: 0.1em 0.3em; border-radius: 0.25rem; }
+.dark .prose-content code { background: rgba(255,255,255,0.08); }
+.prose-content pre { background: rgba(0,0,0,0.05); padding: 0.75rem 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 1rem 0; }
+.dark .prose-content pre { background: rgba(255,255,255,0.06); }
+.prose-content pre code { background: transparent; padding: 0; }
+.prose-content blockquote { border-left: 3px solid #d4d4d4; padding-left: 1rem; color: #525252; margin: 1rem 0; font-style: italic; }
+.dark .prose-content blockquote { border-left-color: #404040; color: #a3a3a3; }
+.prose-content hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+.dark .prose-content hr { border-top-color: #262626; }
+.prose-content img { max-width: 100%; height: auto; border-radius: 0.5rem; margin: 1rem 0; }
