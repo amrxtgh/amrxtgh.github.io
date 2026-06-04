@@ -1,1 +1,1 @@
-[amrxtgh69.github.io]amrxtgh69@github.io
+[amrxtgh69](amrxtgh69.github.io)
