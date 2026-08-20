@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section>
+    <h2>{{ .Title }}</h2>
+    {{ if .Content }}
+    <div>{{ .Content }}</div>
+    {{ end }}
+    {{ $pages := .Pages }}
+    {{ if $pages }}
+    <ul class="post-list">
+        {{ range $pages }}
+        <li>
+            <div class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+            <div class="post-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+            <div class="post-excerpt">{{ .Summary | plainify | truncate 150 }}</div>
+        </li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <p class="text-muted">no projects yet.</p>
+    {{ end }}
+</section>
+{{ end }}

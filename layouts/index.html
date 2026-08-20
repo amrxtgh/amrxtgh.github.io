@@ -1,0 +1,95 @@
+{{ define "main" }}
+
+<section class="hero">
+    <div class="hero-status">
+        <span class="status-dot"></span> whoami
+    </div>
+    <p class="hero-text">
+        <span class="text-muted">&gt;</span> trying to understand how to live, learn, build, and stay humble.<br>
+        <span class="text-muted">&gt;</span> if i find anything useful, i will leave it <a href="/external/">here</a>.
+    </p>
+</section>
+
+<section class="home-grid">
+    <div class="home-col">
+
+        <div class="home-block">
+            <h2><span class="text-muted">[</span>ABOUT<span class="text-muted">]</span></h2>
+            <p>hi, i am falano ko xora. i write code, break things, and try to understand the world through systems.</p>
+            <a href="/about/" class="block-link">about me <span class="text-muted">&rarr;</span></a>
+        </div>
+
+        <div class="home-block">
+            <h2><span class="text-muted">[</span>EXPERIMENTS<span class="text-muted">]</span></h2>
+            {{ $projects := where .Site.RegularPages "Section" "projects" }}
+            {{ if $projects }}
+            <div class="home-posts">
+                {{ range first 3 $projects }}
+                <div class="home-post">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span class="text-muted">{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+                {{ end }}
+            </div>
+            <a href="/projects/" class="block-link">all projects <span class="text-muted">&rarr;</span></a>
+            {{ else }}
+            <p class="text-muted">no projects yet.</p>
+            {{ end }}
+        </div>
+
+        <div class="home-block">
+            <h2><span class="text-muted">[</span>EXTERNAL<span class="text-muted">]</span></h2>
+            <p>links, tools, and places i hang out.</p>
+            <a href="/external/" class="block-link">view links <span class="text-muted">&rarr;</span></a>
+        </div>
+
+    </div>
+    <div class="home-col">
+
+        <div class="home-block">
+            <h2><span class="text-muted">[</span>BLOG<span class="text-muted">]</span></h2>
+            {{ $posts := where .Site.RegularPages "Section" "posts" }}
+            {{ if $posts }}
+            <div class="home-posts">
+                {{ range first 3 $posts }}
+                <div class="home-post">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span class="text-muted">{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+                {{ end }}
+            </div>
+            <a href="/posts/" class="block-link">all posts <span class="text-muted">&rarr;</span></a>
+            {{ else }}
+            <p class="text-muted">no posts yet.</p>
+            {{ end }}
+        </div>
+
+        <div class="home-block">
+            <h2><span class="text-muted">[</span>CONTACT<span class="text-muted">]</span></h2>
+            <div class="status-grid">
+                <div class="status-row">
+                    <span class="text-muted">contact</span>
+                    <span><a href="#" onclick="document.getElementById('signalQR').classList.toggle('hidden'); return false;">signal</a></span>
+                </div>
+                <div id="signalQR" class="hidden">
+                    <img src="../assets/signal-username-qr-code.png" alt="Signal QR Code" style="max-width:150px; margin-top:8px;">
+                </div>
+                <div class="status-row">
+                    <span class="text-muted">social</span>
+                    <span><a href="https://x.com/amrxtgh" target="_blank" rel="noopener">twitter/x</a></span>
+                </div>
+                <div class="status-row">
+                    <span class="text-muted">github</span>
+                    <span><a href="https://github.com/amrxtgh" target="_blank" rel="noopener">github.com/amrxtgh</a></span>
+                </div>
+                <div class="status-row">
+                    <span class="text-muted">theme</span>
+                    <span id="currentTheme">CRT::STANDARD</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{{ end }}
