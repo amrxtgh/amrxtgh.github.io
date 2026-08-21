@@ -630,6 +630,10 @@ footer {
 
     header {
         margin-bottom: 42px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0 16px;
     }
 
     header h1 {
@@ -641,10 +645,10 @@ footer {
     }
 
     .theme-toggle {
-        width: 100%;
-        margin-left: 0;
-        padding: 8px 10px;
-        text-align: left;
+        position: static;
+        margin-left: auto;
+        padding: 4px 10px;
+        align-self: center;
     }
 }
 
