@@ -14,6 +14,9 @@
 </head>
 <body>
     <header>
+        <button class="theme-toggle" id="themeBtn" onclick="cycleTheme()" aria-label="Cycle theme">
+            <span id="themeIcon" style="font-size:1.8em;">&#9788;</span> <span id="themeLabel"></span>
+        </button>
         <h1><a href="/" style="text-decoration:none;color:inherit">{{ .Site.Title }}</a></h1>
         <p>learning systems, code, life, and the strange edges between them</p>
         <nav>
@@ -21,9 +24,6 @@
             <a href="/projects/">[Experiments]</a>
             <a href="/external/">[External]</a>
             <a href="/posts/">[Blog]</a>
-            <button class="theme-toggle" id="themeBtn" onclick="cycleTheme()" aria-label="Cycle theme">
-                <span id="themeLabel"></span>
-            </button>
         </nav>
     </header>
     <main>
