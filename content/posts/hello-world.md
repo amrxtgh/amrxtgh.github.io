@@ -1,5 +1,5 @@
 ---
-title: "Hello World"
+title: "Operator::Message"
 date: 2026-08-20
 draft: false
 ---
