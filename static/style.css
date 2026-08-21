@@ -232,6 +232,7 @@ header {
     margin-bottom: 52px;
     border-bottom: 1px solid var(--border);
     padding-bottom: 18px;
+    position: relative;
 }
 
 header h1 {
@@ -280,16 +281,17 @@ button:focus-visible {
 
 .theme-toggle {
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 2px;
+    border: none;
     padding: 4px 10px;
     cursor: pointer;
     color: var(--text-secondary);
     font-family: inherit;
     font-size: 0.8em;
     line-height: 1;
-    margin-left: auto;
-    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: color 0.2s;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
