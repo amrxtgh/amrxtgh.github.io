@@ -119,23 +119,7 @@ body {
     transition: background 0.2s, color 0.2s;
 }
 
-.theme-phosphor body::before,
-.theme-amber body::before,
-.theme-red body::before,
-.theme-blue body::before,
-.theme-whitehot body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 10;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent 0,
-        transparent 2px,
-        var(--scanline) 3px
-    );
-}
+
 
 /* Glow effects for dark themes */
 .theme-phosphor header h1,
@@ -214,14 +198,7 @@ body {
     text-underline-offset: 3px;
 }
 
-.theme-phosphor .theme-toggle:hover,
-.theme-amber .theme-toggle:hover,
-.theme-red .theme-toggle:hover,
-.theme-blue .theme-toggle:hover,
-.theme-whitehot .theme-toggle:hover {
-    background: var(--accent);
-    color: var(--bg);
-}
+
 
 /* ============================================
    LAYOUT
